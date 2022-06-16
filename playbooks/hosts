@@ -1,2 +1,9 @@
 [webservers]
-testserver ansible_host=77.222.60.230
+vagrant1 ansible_ssh_host=127.0.0.1 ansible_ssh_port=2222
+vagrant2 ansible_ssh_host=127.0.0.1 ansible_ssh_port=2200
+vagrant3 ansible_ssh_host=127.0.0.1 ansible_ssh_port=2201
+
+# Повиденческие параметры - это переменные файла реестра которые отвечают за параметры подключение ansible ansible_host, ansible_port, ansible_user, ansible_password и пр
+# ansible поддерживает генерацию списков по паттерну
+# [web]
+# web[1:20].example.com создаст реестр из адресов с web1.example.com по web20.example.com так же и с буквами web[a-t].example.com
